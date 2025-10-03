@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head><title>API test</title></head>
+    <button onclick="test()"> Test roll API</button>
+    <pre> id="out"</pre>
+    <script>
+        async function test() {
+            const res = await fetch("https://dicerollerapi-bgcgg6fwbzcebwdf.eastus-01.azurewebsites.net/");
+            document.getElementById("out").innerText = await res.text();
+        }
+    </script>
+</html>
