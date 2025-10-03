@@ -1,6 +1,11 @@
 const express = require('express');
+//require cors
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+//use cors
+app.use(cors());
 
 //wake up 
 app.get('/wake', (req, res) => {
